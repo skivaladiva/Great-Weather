@@ -15,18 +15,16 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body> 
+    <div class="app">
     <div class="Container">
-<h1>5 days weather forecast</h1>
+<h1> Which city are you looking for? </h1>
 
-<div class="enterCity"> Which city are you looking for? </div>
-
-<form class="searchForm">
-    <label class="enterForm" for="searchCity"></label>
-    <input type="text" class="enterCity" id="searchCity" placeholder="Enter your city here">
-    <button type="Submit" class="searchButton">Show weather</button>
+<form >
+<div class="col-10 "><input type="search" placeholder="Enter a city.." class="form-control search-input"></div>
+<div class="col-2 "><input type="submit" id="searchButton" class="btn btn-primary" value="Search"></div>
 </form>
-<h3>Choose unit</h3>
-<button class="celsius">Celsius</button><button class="fahrenheit">Fahrenheit</button>
+
+
 <div class="currentWeather">
 <div class="row">
 <div class="col-6">
@@ -36,19 +34,23 @@
 Tuesday 15:35 </span>, clear sky
 </li>
 <li>
-Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h</span>  
+Humidty:  <span class="humidity"> 72 %</span>, Wind: <span class="wind">0,45 km/h</span>  
 </li>
 </ul></div>
 <div class="col-6">
-<div class="temperature-container" >
-    <div><span class="temperature">28</span><span class="unit">°</span>
+<div class="temperatureContainer" >
+    <div><span class="temperature">28</span><span class="temperatureUnit">C°</span>
 
     </div></div></div></div></div>
 
-    <div class="weatherForecast">
+
+
+
+    <div class="weatherForecast row">
 <div class="col">
     <div class="weatherForecastPreview">
 <div class="forecastDay">Thursday</div>
+<canvas width="38" height="38"></canvas>
 <div class="forecastTemperature">
     <span class="forecastTemperatureMax">29°</span>
     <span class="forecastTemperatureMin">25°</span>
@@ -56,6 +58,7 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
 <div class="col">
     <div class="weatherForecastPreview">
         <div class="forecastDay">Friday</div>
+        <canvas width="38" height="38"></canvas>
         <div class="forecastTemperature">
             <span class="forecastTemperatureMax">28°</span>
             <span class="forecastTemperatureMin">26°</span>
@@ -65,6 +68,7 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
 <div class="col">
     <div class="weatherForecastPreview">
         <div class="forecastDay">Saturday</div>
+        <canvas width="38" height="38"></canvas>
         <div class="forecastTemperature">
             <span class="forecastTemperatureMax">25°</span>
             <span class="forecastTemperatureMin">22°</span>
@@ -74,6 +78,7 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
 <div class="col">
     <div class="weatherForecastPreview">
         <div class="forecastDay">Sunday</div>
+        <canvas width="38" height="38"></canvas>
         <div class="forecastTemperature">
             <span class="forecastTemperatureMax">24°</span>
             <span class="forecastTemperatureMin">21°</span>
@@ -83,6 +88,7 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
 <div class="col">
     <div class="weatherForecastPreview">
         <div class="forecastDay">Monday</div>
+        <canvas width="38" height="38"></canvas>
         <div class="forecastTemperature">
             <span class="forecastTemperatureMax">29°</span>
             <span class="forecastTemperatureMin">25°</span>
@@ -92,6 +98,7 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
 <div class="col">
     <div class="weatherForecastPreview">
         <div class="forecastDay">Tuesday</div>
+        <canvas width="38" height="38"></canvas>
         <div class="forecastTemperature">
             <span class="forecastTemperatureMax">28°</span>
             <span class="forecastTemperatureMin">23°</span>
@@ -99,7 +106,12 @@ Humidty:  <span class="humidity"> 72%</span>, Wind: <span class="wind">0,45km/h<
     </div>
 </div>
     </div>
-<footer><a href"https://github.com/skivaladiva/Great-Weather.git">Github</a></footer>
+<div class="changeUnitContainer">
+    <h4>Change unit</h4>
+    <button class="unit">C°</button><button class="unit">F°</button>
 </div>
+<footer><a href="https://github.com/skivaladiva/Great-Weather.git">Github</a> <a href="https://great-weather-app-by-skiva.netlify.app/">Netlify</a></footer>
+</div></div>
 <script src="src/index.js"></script>
+
 </body>
